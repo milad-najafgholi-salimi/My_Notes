@@ -1,5 +1,8 @@
 """
-It finds BIGGEST value in an array and insert it in the end of the array. In simple words it sorts from BIGGEST to LOWEST.
+It does all the process in "Swap" form. Always swaps a pair of values till the end.
+
+It looks at the two first values. Does the lowest value come first? If the answer is YES, then dosen't need to swap them. But if the answer is NO,
+it will swap them and do this process two by two till the end and trys to put the biggest value at the end.
 """
 
 def bubble_sort(arr):
