@@ -8,6 +8,13 @@ def linear_search(arr, target_value):
             return i
     return -1
 
+"""
+*Linear Search Time Complexity*
+
+Big O Notation:
+O(n)
+"""
+
 
 # Example:
 
@@ -19,4 +26,5 @@ result = linear_search(array, target_value)
 if result != -1:
     print(result)
 else:
+
     print("Not found")
