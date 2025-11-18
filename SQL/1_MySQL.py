@@ -8,6 +8,10 @@ MySQL Get Started -
     * Navigate your command line to the location of PIP, and type the following:
         Download and install "MySQL Connector":
             "C:\Users\Your Name\AppData\Local\Programs\Python\Python36-32\Scripts>python -m pip install mysql-connector-python"
+
+What the MySQL Connector actually does:
+mysql-connector-python only adds one capability:
+It lets your Python code connect to a MySQL database and run SQL queries.
 """
 
 # Run the following code and if you didn't get any errors, it works well:
@@ -25,6 +29,7 @@ mydb = mysql.connector.connect(
 )
 
 print(mydb)
+
 
 
 
