@@ -12,6 +12,7 @@ MySQL Get Started -
 What the MySQL Connector actually does:
 mysql-connector-python only adds one capability:
 It lets your Python code connect to a MySQL database and run SQL queries.
+Which means you can't run SQL code in Python module directly. So you need connector.
 """
 
 # Run the following code and if you didn't get any errors, it works well:
@@ -34,3 +35,4 @@ print(mydb)
 
 
 # Point: With this driver, you can work with python in VsCode.
+
