@@ -1,0 +1,18 @@
+SQL Select Statement -
+
+    The /SELECT/ statement is used to select data from a database.
+    Example - Return data from the /Customers/ table:
+
+    SELECT CustomerName,City FROM Customers;
+
+
+""" Syntax """
+SELECT column1, column2, ...
+FROM table_name;
+
+
+""" Select All Columns """
+If you want to return all columns, without specifying every column name, you can use the /SELECT */ syntax:
+
+Example:
+SELECT * FROM Customers;
