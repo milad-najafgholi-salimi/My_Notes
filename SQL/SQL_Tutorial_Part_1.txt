@@ -25,3 +25,7 @@ Some of The Most Important SQL Commands:
 * DROP TABLE - deletes a table 
 * CREATE INDEX - creates an index (search key)
 * DROP INDEX - deletes an index
+
+
+What is Database?
+A database is a collection of organized data that can be easily stored, searched, updated, and managed by a computer.
