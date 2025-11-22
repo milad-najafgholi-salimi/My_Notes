@@ -1,0 +1,42 @@
+SQL NOT Operator -
+
+The /NOT/ operator is used in combination with other operators to give the opposite result, also called the negative result.
+
+    Example - Select only the customers that are NOT from Germany:
+        SELECT * FROM Customers
+        WHERE NOT Country = 'Germany';
+
+""" Syntax """
+SELECT column1, column2, ...
+FROM table_name
+WHERE NOT condition;
+
+
+""" NOT LIKE """
+Example - Select customers that does not start with the letter 'M':
+    SELECT * FROM Customers
+    WHERE CustomerName NOT LIKE 'M%';
+
+
+""" NOT BETWEEN """
+Example - Select customers with a customerID not between 10 and 60:
+    SELECT * FROM Customers
+    WHERE customerID NOT BETWEEN 10 AND 60;
+
+
+""" NOT IN """
+Example - Select customers that are not from Tehran or Isfahan:
+    SELECT * FROM Customers
+    WHERE City NOT IN ('Tehran', 'Isfahan');
+
+
+""" NOT Greater Than """
+Example - Select customers with a CustomerID not greater than 50:
+    SELECT * FROM Customers
+    WHERE NOT CustomerID > 50;
+
+
+""" NOT Less Than """
+Example - Select customers with a CustomerID not less than 50:
+    SELECT * FROM Customers
+    WHERE NOT CustomerID < 50;
