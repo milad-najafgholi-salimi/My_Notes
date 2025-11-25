@@ -8,7 +8,7 @@ searching for, adding, and deleting data can be done really quickly, even for la
 In a Linked List, finding a person "Bob" takes time because we would have to go from one node 
 to the next, checking each node, until the node with "Bob" is found.
 
-And finding "Bob" in an list/array could be fast if we knew the index, but when we only 
+And finding "Bob" in a(n) list/array could be fast if we knew the index, but when we only 
 know the name "Bob", we need to compare each element and that takes time.
 
 With a Hash Table however, finding "Bob" is done really fast because there is a way to go directly to 
@@ -75,7 +75,7 @@ def contains(name):
 print(f"\"Milad\" is in the Hash Table: {contains("Milad")}")
 
 """
-Because we do not have to check element by element to find out if "Pete" is in there, we can just 
+Because we do not have to check element by element to find out if "Milad" is in there, we can just 
 use the hash function to go straight to the right element!
 """
 
