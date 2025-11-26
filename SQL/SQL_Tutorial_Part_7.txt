@@ -1,42 +1,41 @@
-SQL NOT Operator -
+SQL INSERT INTO Statement -
 
-The /NOT/ operator is used in combination with other operators to give the opposite result, also called the negative result.
-
-    Example - Select only the customers that are NOT from Germany:
-        SELECT * FROM Customers
-        WHERE NOT Country = 'Germany';
-
-""" Syntax """
-SELECT column1, column2, ...
-FROM table_name
-WHERE NOT condition;
+The /INSERT INTO/ statement is used to insert new records in a table.
 
 
-""" NOT LIKE """
-Example - Select customers that does not start with the letter 'M':
-    SELECT * FROM Customers
-    WHERE CustomerName NOT LIKE 'M%';
+""" INSERT INTO Syntax """
+It is possible to write the /INSERT INTO/ statement in two ways:
+
+1) Specify both the column names and the values to be inserted:
+
+    INSERT INTO table_name (column1, column2, column3, ...)
+    VALUES (value1, value2, value3, ...)
+
+2) 2. If you are adding values for all the columns of the table, you do not need to specify the column names in the SQL query.
+    However, make sure the order of the values is in the same order as the columns in the table. 
+    Here, the INSERT INTO syntax would be as follows:
+
+    INSERT INTO table_name
+    VALUES (value1, value2, value3, ...);
 
 
-""" NOT BETWEEN """
-Example - Select customers with a customerID not between 10 and 60:
-    SELECT * FROM Customers
-    WHERE customerID NOT BETWEEN 10 AND 60;
+""" INSERT INTO Example """
+The following SQL statement inserts a new record in the "Customers" table:
+
+    INSERT INTO Customers (CustomerName, contactName, Address, City, PostalCode, Country)
+    VALUES ('cardinal', 'Tom B Erichsen', 'skagen 21', 'stavanger', '4006', 'Norway)
 
 
-""" NOT IN """
-Example - Select customers that are not from Tehran or Isfahan:
-    SELECT * FROM Customers
-    WHERE City NOT IN ('Tehran', 'Isfahan');
+""" Insert Multiple Rows """
+It is also possible to insert multiple rows in one statement.
 
+To insert multiple rows of data, we use the same /INSERT INTO/ statement, but with multiple values:
 
-""" NOT Greater Than """
-Example - Select customers with a CustomerID not greater than 50:
-    SELECT * FROM Customers
-    WHERE NOT CustomerID > 50;
+    Example:
+        INSERT INTO Customers (CustomerName, contactName, Address, City, PostalCode, Country)
+        VALUES
+        ('cardinal', 'Tom B. Erichsen', 'Skagen 21', 'Stavanger', '4006', 'Norway'),
+        ('Greasy Burger', 'Per Olsen', 'Gateveien 15', 'sandnes', '4306', 'Norway'),
+        ('Tasty Tee' 'Finn Egan', 'Streetroad 19B', 'Liverpool, 'L1 0AA', 'UK');
 
-
-""" NOT Less Than """
-Example - Select customers with a CustomerID not less than 50:
-    SELECT * FROM Customers
-    WHERE NOT CustomerID < 50;
+Note: Make sure you separate each set of values with a comma /,/ .

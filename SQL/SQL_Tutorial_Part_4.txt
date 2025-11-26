@@ -1,62 +1,49 @@
-SQL WHERE Clause -
+SQL Order By Keyword -
 
-
-The WHERE clause is used to filter records. 
-
-[record: "تاریخچه، نوشته، ثبت، بایگانی، یادداشت و ..."]
-
-It is used to extract only those records that fulfill a specified condition.
-
-    Example - Select all customers from Iran:
-        SELECT * FROM Customers
-        WHERE Country="Iran";
-
+The /ORDER BY/ keyword is used to sort the result-set in ascending or descending order.
+    Example - Sort the products by price:
+        SELECT * FROM products
+        ORDER BY Price;
+        # from low to high
 
 """ Syntax """
 SELECT column1, column2, ...
 FROM table_name
-WHERE condition;
-
-Note: The /WHERE/ clause is not only used in /SELECT/ statements, it is also used in /UPDATE/, /DELETE/, etc.!
+ORDER BY column1, column, ...   ASC|DESC  # ASC: Ascending , DESC: Descending
 
 
-
-""" Text Fields vs. Numeric Fields """
-SQL requires single quotes around \text values\ (most database systems will also allow double quotes).
-
-However, numeric fields \should not\ be enclosed in quotes:
-    Example:
-        SELECT * FROM Customers
-        WHERE CustomerID=1;
-
-
-""" Operators in The WHERE Clause """
-You can use other operators than the = operator to filter the search.
-
-    Example - Select all customers with a CustomerID greater than 80:
-        SELECT * FROM Customers
-        WHERE CustomerID > 80;
-
-The following operators can be used in the /WHERE/ clause:
-=           --->    Equal
->           --->    Greater than
-<           --->    Less than
->=          --->    Greater than or equal
-<=          --->    Less than or equal
-<>          --->    Not equal. Note: In some versions of SQL this operator may be written as !=
-BETWEEN     --->    Between a certain range
-    Example:
+""" DESC """
+The ORDER BY keyword sorts the records in ascending order by default. To sort the records in descending order, use the DESC keyword.
+    Example - Sort the products from highest to lowest price:
         SELECT * FROM Products
-        WHERE Price BETWEEN 50 AND 60;
+        ORDER BY Price DESC;
+        # from high to low
 
-LIKE        --->    Search for a pattern
+""" Order Alphabetically """
+For string values the ORDER BY keyword will order alphabetically:
+    Example - Sort the products alphabetically by ProductName:
+        SELECT * FROM Products
+        ORDER BY ProductName;
+
+
+""" Alphabetically DESC """
+To sort the table reverse alphabetically, use the DESC keyword:
+    Example - Sort the products by ProductName in reverse order:
+        SELECT * FROM Products
+        ORDER BY ProductName DESC;
+
+
+""" ORDER BY Several Columns """
+The following SQL statement selects all customers from the "Customers" table, sorted by the "Country" and the 
+"CustomerName" column. This means that it orders by Country, but if some rows have the same Country, it orders them 
+by CustomerName:
     Example:
         SELECT * FROM Customers
-        WHERE City LIKE 's%'; 
-        # Means return every city that starts with 's' and continue of the word. If don't use '%' it will return cities with name 's' and we know there is not such a city.
+        ORDER BY Country, CustomerName;
 
-IN         --->     To specify multiple possible values for a column
+
+""" Using Both ASC and DESC """
+The following SQL statement selects all customers from the "Customers" table, sorted ascending by the "Country" and descending by the "CustomerName" column:
     Example:
         SELECT * FROM Customers
-        WHERE City IN ('Paris', 'Tehran');
-        # Searches and Returns only 'Paris' and 'Tehran'
+        ORDER BY Country ASC, CustomerName DESC;

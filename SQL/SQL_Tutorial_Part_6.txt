@@ -1,58 +1,42 @@
-SQL AND Operator - 
+SQL NOT Operator -
 
-The /WHERE/ clause can contain one or many /AND/ operators.
+The /NOT/ operator is used in combination with other operators to give the opposite result, also called the negative result.
 
-The AND operator is used to filter records based on more than one condition, like if you want to return all customers from Iran that starts with the letter 'M':
-    Example - Select all customers from Iran that starts with the letter 'M':
-        SELECT * 
-        FROM customers
-        WHERE Country = "Iran" AND CustomerName LIKE "M%";
+    Example - Select only the customers that are NOT from Germany:
+        SELECT * FROM Customers
+        WHERE NOT Country = 'Germany';
 
 """ Syntax """
 SELECT column1, column2, ...
 FROM table_name
-WHERE condition1 AND condition2 AND condition3 ...;
+WHERE NOT condition;
 
 
-""" AND vs OR """
-The /AND/ operator displays a record if all the conditions are TRUE.
-The /OR/ operator displays a record if any of the conditinos are TRUE.
-
-    Example:
-        SELECT * FROM Customers
-        WHERE Country = 'Iran'
-        AND City = 'Tehran'
-        AND CustoerID > 50;
-
-    Example:
-        SELECT * FROM Customers
-        WHERE Country = 'Iran' AND (CustomerName LIKE 'M%' OR CustomerName LIKE 'S%');
-
-Without parenthesis, the select statement will return all customers from Iran that starts with a "M", plus all customers that starts with an "S", regardless of the country value:
-    Example:
-        SELECT * FROM Customers
-        WHERE Country = 'Iran' AND CustomerName LIKE 'M%' OR CustomerName LIKE 'S%';
+""" NOT LIKE """
+Example - Select customers that does not start with the letter 'M':
+    SELECT * FROM Customers
+    WHERE CustomerName NOT LIKE 'M%';
 
 
+""" NOT BETWEEN """
+Example - Select customers with a customerID not between 10 and 60:
+    SELECT * FROM Customers
+    WHERE customerID NOT BETWEEN 10 AND 60;
 
 
-SQL OR Operator -
-The /WHERE/ clause can contain one or more /OR/ operators.
-
-The /OR/ operator is used to filter records based on more than one condition, like if you want to return all customers from Germany but also those from Iran:
-
-    Example - Select all customers from Germany or Iran:
-        SELECT *
-        FROM Customers
-        WHERE Country = 'Germany' OR Country = 'Iran';
-
-""" Syntax """
-SELECT column1, column2, ...
-FROM table_name
-WHERE condition1 OR condition2 OR condition3 ...;
+""" NOT IN """
+Example - Select customers that are not from Tehran or Isfahan:
+    SELECT * FROM Customers
+    WHERE City NOT IN ('Tehran', 'Isfahan');
 
 
-The following SQL statement selects all fields from Customers where either City is "Tehran", CustomerName starts with the letter "M" or Country is "Iran":
-    Example:
-        SELECT * FROM Customers
-        WHERE City = 'Tehran' OR CustomerName LIKE 'M%' OR Country = 'Iran';
+""" NOT Greater Than """
+Example - Select customers with a CustomerID not greater than 50:
+    SELECT * FROM Customers
+    WHERE NOT CustomerID > 50;
+
+
+""" NOT Less Than """
+Example - Select customers with a CustomerID not less than 50:
+    SELECT * FROM Customers
+    WHERE NOT CustomerID < 50;

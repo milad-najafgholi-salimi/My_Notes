@@ -16,3 +16,75 @@ If you want to return all columns, without specifying every column name, you can
 
 Example:
 SELECT * FROM Customers;
+
+
+
+
+
+SQL Select Distinct Statement -
+
+The /SELECT DISTINCT/ statement is used to return only distinct (different) values.
+
+    Example - Select all the different countries from the "Customers" table:
+        SELECT DISTINCT Countriy FROM Customers;
+
+Inside a table, a column often contains many duplicate values; and sometimes you only want to list the different (distinct) values.
+
+
+""" Syntax """
+SELECT DISTINCT column1, column2, ...
+FROM table_name;
+
+
+""" Count Distinct """
+By using the /DISTINCT/ keyword in a function called /COUNT/, we can return the number of different countries.
+    Example:
+        SELECT COUNT(DISTINCT Countriy) FROM Customers;
+
+
+
+
+
+SQL TOP, LIMIT, FETCH FIRST or ROWNUM Clause -
+
+The /SELECT TOP/ clause is used to specify the number of records to return.
+
+The /SELECT TOP/ clause is useful on large tables with thousands of records. Returning a large number of records can 
+impact performance.
+
+Example - Select only the first 3 records of the Customers table:
+    SELECT TOP 3 * FROM Customers;
+
+Note: Not all database systems support the /SELECT TOP/ clause. MySQL supports the /LIMIT/ clause to select 
+a limited number of records, while Oracle uses /FETCH FIRST n ROWS ONLY/ and /ROWNUM/.
+
+
+""" LIMIT """
+The following SQL statement shows the equivalent example for MySQL:
+    Example - Select the first 3 records of the Customers table:
+        SELECT * FROM Customers
+        LIMIT 3;
+
+
+""" SQL TOP PERCENT Examplel """
+The following SQL statement selects the first 50% of the records from the "Customers" table (for SQL Server/MS Access):
+Example:
+    SELECT TOP 50 PERCENT * FROM Customers;
+
+
+""" Add a WHERE Clause """
+The following SQL statement shows the equivalent example for MySQL:
+    Example:
+        SELECT * FROM Customers
+        WHERE Country = 'Iran'
+        LIMIT 3;
+
+
+""" Add the ORDER BY keyword """
+Add the /ORDER BY/ keyword when you want to sort the result, and return the first 3 records of the sorted result.
+
+The following SQL statement shows the equivalent example for MySQL:
+    Example:
+        SELECT * FROM Customers
+        ORDER BY CustomerName DESC
+        LIMIT 3;

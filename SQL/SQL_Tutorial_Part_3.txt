@@ -1,19 +1,62 @@
-SQL Select Distinct Statement -
+SQL WHERE Clause -
 
-The /SELECT DISTINCT/ statement is used to return only distinct (different) values.
 
-    Example - Select all the different countries from the "Customers" table:
-        SELECT DISTINCT Countriy FROM Customers;
+The WHERE clause is used to filter records. 
 
-Inside a table, a column often contains many duplicate values; and sometimes you only want to list the different (distinct) values.
+[record: "تاریخچه، نوشته، ثبت، بایگانی، یادداشت و ..."]
+
+It is used to extract only those records that fulfill a specified condition.
+
+    Example - Select all customers from Iran:
+        SELECT * FROM Customers
+        WHERE Country="Iran";
 
 
 """ Syntax """
-SELECT DISTINCT column1, column2, ...
-FROM table_name;
+SELECT column1, column2, ...
+FROM table_name
+WHERE condition;
+
+Note: The /WHERE/ clause is not only used in /SELECT/ statements, it is also used in /UPDATE/, /DELETE/, etc.!
 
 
-""" Count Distinct """
-By using the /DISTINCT/ keyword in a function called /COUNT/, we can return the number of different countries.
+
+""" Text Fields vs. Numeric Fields """
+SQL requires single quotes around \text values\ (most database systems will also allow double quotes).
+
+However, numeric fields \should not\ be enclosed in quotes:
     Example:
-        SELECT COUNT(DISTINCT Countriy) FROM Customers;
+        SELECT * FROM Customers
+        WHERE CustomerID=1;
+
+
+""" Operators in The WHERE Clause """
+You can use other operators than the = operator to filter the search.
+
+    Example - Select all customers with a CustomerID greater than 80:
+        SELECT * FROM Customers
+        WHERE CustomerID > 80;
+
+The following operators can be used in the /WHERE/ clause:
+=           --->    Equal
+>           --->    Greater than
+<           --->    Less than
+>=          --->    Greater than or equal
+<=          --->    Less than or equal
+<>          --->    Not equal. Note: In some versions of SQL this operator may be written as !=
+BETWEEN     --->    Between a certain range
+    Example:
+        SELECT * FROM Products
+        WHERE Price BETWEEN 50 AND 60;
+
+LIKE        --->    Search for a pattern
+    Example:
+        SELECT * FROM Customers
+        WHERE City LIKE 's%'; 
+        # Means return every city that starts with 's' and continue of the word. If don't use '%' it will return cities with name 's' and we know there is not such a city.
+
+IN         --->     To specify multiple possible values for a column
+    Example:
+        SELECT * FROM Customers
+        WHERE City IN ('Paris', 'Tehran');
+        # Searches and Returns only 'Paris' and 'Tehran'

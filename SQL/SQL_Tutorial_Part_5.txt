@@ -1,49 +1,58 @@
-SQL Order By Keyword -
+SQL AND Operator - 
 
-The /ORDER BY/ keyword is used to sort the result-set in ascending or descending order.
-    Example - Sort the products by price:
-        SELECT * FROM products
-        ORDER BY Price;
-        # from low to high
+The /WHERE/ clause can contain one or many /AND/ operators.
+
+The AND operator is used to filter records based on more than one condition, like if you want to return all customers from Iran that starts with the letter 'M':
+    Example - Select all customers from Iran that starts with the letter 'M':
+        SELECT * 
+        FROM customers
+        WHERE Country = "Iran" AND CustomerName LIKE "M%";
 
 """ Syntax """
 SELECT column1, column2, ...
 FROM table_name
-ORDER BY column1, column, ...   ASC|DESC  # ASC: Ascending , DESC: Descending
+WHERE condition1 AND condition2 AND condition3 ...;
 
 
-""" DESC """
-The ORDER BY keyword sorts the records in ascending order by default. To sort the records in descending order, use the DESC keyword.
-    Example - Sort the products from highest to lowest price:
-        SELECT * FROM Products
-        ORDER BY Price DESC;
-        # from high to low
+""" AND vs OR """
+The /AND/ operator displays a record if all the conditions are TRUE.
+The /OR/ operator displays a record if any of the conditinos are TRUE.
 
-""" Order Alphabetically """
-For string values the ORDER BY keyword will order alphabetically:
-    Example - Sort the products alphabetically by ProductName:
-        SELECT * FROM Products
-        ORDER BY ProductName;
-
-
-""" Alphabetically DESC """
-To sort the table reverse alphabetically, use the DESC keyword:
-    Example - Sort the products by ProductName in reverse order:
-        SELECT * FROM Products
-        ORDER BY ProductName DESC;
-
-
-""" ORDER BY Several Columns """
-The following SQL statement selects all customers from the "Customers" table, sorted by the "Country" and the 
-"CustomerName" column. This means that it orders by Country, but if some rows have the same Country, it orders them 
-by CustomerName:
     Example:
         SELECT * FROM Customers
-        ORDER BY Country, CustomerName;
+        WHERE Country = 'Iran'
+        AND City = 'Tehran'
+        AND CustoerID > 50;
 
-
-""" Using Both ASC and DESC """
-The following SQL statement selects all customers from the "Customers" table, sorted ascending by the "Country" and descending by the "CustomerName" column:
     Example:
         SELECT * FROM Customers
-        ORDER BY Country ASC, CustomerName DESC;
+        WHERE Country = 'Iran' AND (CustomerName LIKE 'M%' OR CustomerName LIKE 'S%');
+
+Without parenthesis, the select statement will return all customers from Iran that starts with a "M", plus all customers that starts with an "S", regardless of the country value:
+    Example:
+        SELECT * FROM Customers
+        WHERE Country = 'Iran' AND CustomerName LIKE 'M%' OR CustomerName LIKE 'S%';
+
+
+
+
+SQL OR Operator -
+The /WHERE/ clause can contain one or more /OR/ operators.
+
+The /OR/ operator is used to filter records based on more than one condition, like if you want to return all customers from Germany but also those from Iran:
+
+    Example - Select all customers from Germany or Iran:
+        SELECT *
+        FROM Customers
+        WHERE Country = 'Germany' OR Country = 'Iran';
+
+""" Syntax """
+SELECT column1, column2, ...
+FROM table_name
+WHERE condition1 OR condition2 OR condition3 ...;
+
+
+The following SQL statement selects all fields from Customers where either City is "Tehran", CustomerName starts with the letter "M" or Country is "Iran":
+    Example:
+        SELECT * FROM Customers
+        WHERE City = 'Tehran' OR CustomerName LIKE 'M%' OR Country = 'Iran';
