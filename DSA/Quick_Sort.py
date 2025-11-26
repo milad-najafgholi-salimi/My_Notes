@@ -60,3 +60,4 @@ That is why Quicksort is so popular.
    
 my_array = [64, 34, 25, 12, 22, 11, 90, 5]
 quicksort(my_array)
+print(my_array)

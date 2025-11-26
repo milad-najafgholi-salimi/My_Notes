@@ -42,7 +42,7 @@ def merge(left, right):
 
 
 """
-I don't understand all of it very well. I have issues in some part of it.
+I don't understand all of it very good. I have issues in some part of it.
 
 
 *Merge Sort Time Complexity*
