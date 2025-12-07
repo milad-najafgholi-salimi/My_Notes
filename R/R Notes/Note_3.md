@@ -1,0 +1,109 @@
+# Data Types
+- We can use the class() function to check the data type of a variable. - Example:
+```
+# numeric
+x <- 10.5
+class(x)
+
+# integer
+x >- 1000L
+class(x)
+
+# complex
+x <- 3 + 9i
+class(x)
+
+# character/string
+x <- "R is exciting"
+class(x)
+
+# logical/boolean
+x <- TRUE
+class(x)
+```
+---
+---
+# Numbers
+- There are three number types in R:
+    * numeric
+    * integer
+    * complex
+* Variables of number types are created when you assign a value to them:
+```
+x <- 10.5 [or] x <- 12          # numeric
+y <- 10L  [wrong: y <- 10.5L]   # integer
+z <- 1i   [Also: z <- 3 + 5i]   # complex
+```
+---
+#### Type Conversion
+- You can convert from one type to another with the following functions:
+    * as.numeric()
+    * as.integer()
+    * as.complex()
+Example:
+```
+x <- 1L     # integer
+y <- 2      # numeric
+
+# convert from integer to numeric:
+a <- as.numeric(x)
+
+# convert from numeric to integer:
+b <- as.integer(y)
+
+# print values of x and y
+x
+y
+
+# print the class name of a and b
+class(a)
+class(b)
+```
+---
+---
+# Math
+- In R, you can use operators to perform common mathematical operations on numbers.
+---
+#### Built-in Math Function
+- R also has many built-in math functions that allows you to perform mathematical tasks on numbers.
+For example, the min() and max() functions can be used to find the lowest or highest number in a set. - Example:
+```
+max(5, 10, 15)
+min(5, 10, 15)
+
+# output:
+	15
+	5
+```
+- The sqrt() function returns the square root of a number. - Example:
+```
+sqrt(16)
+
+# output:
+	4
+```
+- The abs() function returns the absolute (positive) value of a number. - Example:
+```
+abs(-4.7)
+
+# output:
+	4.7
+```
+- The ceiling() function rounds a number upwards to its nearest integer, and the floor() function rounds a number 
+downwards to its nearest integer, and returns the result. - Example:
+```
+ceiling(1.4)
+floor(1.4)
+
+# output:
+	2
+	1
+```
+
+|  
+|  
+|
+
+Next ---> [[Note_4]]
+
+Previous ---> [[Note_2]]
