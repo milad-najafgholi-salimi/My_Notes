@@ -49,6 +49,7 @@ paste(str1, str2)
 - To insert characters that are illegal in a string, you must use an escape character.
 - An escape character is a backslash \ followed by the character you want to insert.
 
+# Page
 |
 |
 |
