@@ -1,5 +1,3 @@
-# If ... Else Statement
----
 #### If Statement
 - An "if statement" is written with the if keyword, and it is used to specify a block of code to be executed if a condition is TRUE - Example:
 ```
@@ -52,12 +50,3 @@ if (b > a) {
 }
 ```
 You can also have if statements inside if statements, this is called nested if statements.
-
-# Page
-|
-|
-|
-
-Next ---> [[Note_7]]
-
-Previous ---> [[Note_5]]

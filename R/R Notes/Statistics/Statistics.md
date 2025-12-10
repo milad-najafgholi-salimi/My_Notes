@@ -1,0 +1,5 @@
+- # [[Statistic]]
+- # [[Data Set]]
+- # [[Max and Min]]
+- # [[Mean - Median - Mode]]
+- # [[Percentiles]]

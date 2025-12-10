@@ -1,0 +1,5 @@
+- # [[Plot]]
+- # [[Line]]
+- # [[Scatter Plot]]
+- # [[Pie Charts]]
+- # [[Bars]]

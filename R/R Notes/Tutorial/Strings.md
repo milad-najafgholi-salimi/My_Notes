@@ -1,4 +1,3 @@
-# Strings
 - A string is surrounded by either single quotation marks, or double quotation marks:
 "hello" is the same as 'hello'.
 ---
@@ -48,12 +47,3 @@ paste(str1, str2)
 #### Escape Characters
 - To insert characters that are illegal in a string, you must use an escape character.
 - An escape character is a backslash \ followed by the character you want to insert.
-
-# Page
-|
-|
-|
-
-Next ---> [[Note_5]]
-
-Previous ---> [[Note_3]]

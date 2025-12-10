@@ -1,9 +1,3 @@
-# Booleans / Logical Values
-- You can evaluate any expression in R, and get one of two answers, TRUE or FALSE.
----
----
-# Operations
----
 #### Arithmetic Operators
 
 | Operator | Name                              | Example |
@@ -43,38 +37,3 @@ x <- 3 is equal to 3 -> x .
 | \|       | Elementwise-Logical OR operator. Returns TRUE if one of the statements is TRUE |
 | \|\|     | Logical OR operator. Returns TRUE if one of the statements is TRUE             |
 | !        | Logical NOT - Returns FALSE if statement is TRUE                               |
-
----
----
-# AND OR Operator
-- The & symbol (and) is a logical operator, and is used to combine conditional statements - Example:
-```
-a <- 200
-b <- 33
-c <- 500
-
-if (a > b & c > a) {
-	print("Both conditions are true")
-}
-```
----
-#### OR
-- The | symbol (or) is a logical operator, and is used to combine conditional statements - Example:
-```
-a <- 200
-b <- 33
-c <- 500
-
-if (a > b | a > c) {
-	print("At least one of the conditions is true")
-}
-```
-
-# Page
-|
-|
-|
-
-Next ---> [[Note_6]]
-
-Previous ---> [[Note_4]]
