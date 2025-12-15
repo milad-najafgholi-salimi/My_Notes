@@ -7,4 +7,3 @@ getwd()
 setwd("path")
 ```
 Point: The parameter should be a string. So you need put the path in between double-quotes.
-

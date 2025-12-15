@@ -8,7 +8,7 @@ My main sources to gathering these information are from:
 - Maktabkhooneh.org
 
 Feel free to use if you need. 
-To have a beautiful experience, open these files in **Obsidian**. 
+To have a beautiful experience, open *indexes* file in **Obsidian**. 
+It's like a wiki-link that links every single file together; You don't need to open files manually. Just search your topic in Sorted lists.
 
-#make_it_better_with_shieds_io. make it professional later.
-Use these to make beautiful things like python, R, SQL, DSA and so on.
+Have fun!
