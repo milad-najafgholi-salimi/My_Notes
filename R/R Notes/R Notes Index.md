@@ -2,4 +2,4 @@
 - # [[Data Structures]]
 - # [[Graphics]]
 - # [[Statistics]]
-## [[Indexes | Back]]
+## [[R Indexes| Back]]

@@ -9,4 +9,4 @@
 - ### [[Head and Tail]]
 - ### [[Missing Values]]
 - ### [[Installing Packages]]
-## [[Indexes | Back]]
+## [[R Indexes| Back]]
