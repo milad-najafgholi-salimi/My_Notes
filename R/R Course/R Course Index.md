@@ -1,0 +1,12 @@
+# Section 1
+- ###  [[File Handling]]
+- ### [[Sequence]]
+- ### [[Sorting]]
+- ### [[Mathematics]]
+- ### [[Bool Functions]]
+- ### [[Scan Function]] 
+- ### [[Readline Function]]
+- ### [[Head and Tail]]
+- ### [[Missing Values]]
+- ### [[Installing Packages]]
+## [[R Indexes| Back]]

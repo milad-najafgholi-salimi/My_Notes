@@ -1,0 +1,1 @@
+Compiling is the process of converting human-readable code into machine-readable code. This is usually done by a software program called a compiler, which takes the source code and translates it into executable instructions for the computer to carry out.

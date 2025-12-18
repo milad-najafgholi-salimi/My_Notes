@@ -1,0 +1,1 @@
+**Git** is a **distributed version control system (VCS)** used to track changes in files, especially source code, so multiple people can collaborate efficiently and safely on a project.

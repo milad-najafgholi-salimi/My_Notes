@@ -1,0 +1,1 @@
+- You can evaluate any expression in R, and get one of two answers, TRUE or FALSE.

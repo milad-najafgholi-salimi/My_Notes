@@ -1,5 +1,0 @@
-Recursive functions can be use as for and while loop.
-
-What is the difference between SQL and MySQL?
-+ SQL is a language.
-+ MySQL is a database system that uses SQL.
