@@ -1,3 +1,5 @@
 - ### [[R Indexes]]
 - ### [[Git Course Index]]
 - ### [[Notes Index]]
+- ### [[LPIC - 1 Index]]
+- ### [[Vim Index]]
