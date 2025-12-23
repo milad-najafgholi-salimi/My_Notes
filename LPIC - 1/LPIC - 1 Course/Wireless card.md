@@ -1,0 +1,1 @@
+A **wireless card** (also called a **wireless network card** or **Wi-Fi card**) is a **hardware device that allows a computer or device to connect to a network without using cables**, by using **radio waves**.

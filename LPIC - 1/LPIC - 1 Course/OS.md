@@ -1,0 +1,1 @@
+An operating system (OS) is a system software that manages computer hardware, and software resources, and provides common services for computer programs. It sits on top of the hardware and manages the resources when other software (Sometimes called an userspace program) asks for it.

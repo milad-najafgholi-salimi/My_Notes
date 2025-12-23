@@ -1,0 +1,2 @@
+UEFI (Unified Extensible Firmware Interface).
+Started as EFI in 1998 in Intel. Now the standard Uses a specific disk partition for boot (EFI System Partition (ESP)) and uses FAT. On Linux it's located on `/boot/efi `and the files use the `.efi` extension. You need to register each bootloader.
