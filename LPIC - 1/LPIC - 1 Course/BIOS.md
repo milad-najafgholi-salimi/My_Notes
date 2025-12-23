@@ -1,0 +1,1 @@
+BIOS (Basic Input/Output System). Old and redundant. It is intractable through a text menu-based system and it boots the computer by accessing the first sector of the first partition of your hard disk (MBR). This is not enough for modern systems and most systems use a two-step boot procedure.

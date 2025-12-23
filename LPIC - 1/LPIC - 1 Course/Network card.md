@@ -1,0 +1,1 @@
+A **network card**—more formally called a **Network Interface Card (NIC)**—is a **hardware component that allows a computer or device to connect to a network** so it can communicate with other devices and access the internet.

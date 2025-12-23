@@ -1,0 +1,2 @@
+Arduino is a microcontroller designed for simple tasks and direct control of electronic devices, while Raspberry Pi is a more powerful microprocessor that can run a full operating system and handle complex applications. 
+The choice between them depends on the project's requirements, with Arduino being better for straightforward control tasks and Raspberry Pi suited for more advanced computing needs.
