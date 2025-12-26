@@ -16,5 +16,6 @@
 - ### [[Git log -p]]
 - ### [[Git mv]]
 - ### [[Git rm]]
+- ### [[Git commit --amend]]
 
 ### [[All Indexes | Back]] 
