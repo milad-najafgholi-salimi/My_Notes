@@ -3,4 +3,12 @@
 - ### [[Update package]]
 - ### [[ASCII]]
 - ### [[Compile Kernel]]
+- ### [[Hash]]
+- ### [[Encryption]]
+- ### [[Major hash functions compared]]
+- ### [[Salt]]
+- ### [[Stretching]]
+- ### [[Rainbow Table Attacks]]
+- ### [[Pepper]]
+
 ### [[All Indexes | Back]] 
